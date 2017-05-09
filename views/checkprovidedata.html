@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Search Account</title>
+	<title>Check Provide Data</title>
 	<meta charset="utf-8">
 	<script type="text/javascript" src="../node_modules/bignumber.js/bignumber.min.js"></script>
 	<script type="text/javascript" src="../node_modules/web3/web3-light.js"></script>
@@ -29,11 +29,10 @@
             </div>
             <div class="mdl-layout__header-row portfolio-navigation-row ">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-                    <a class="mdl-navigation__link " href="createAccounts.html">Create Accounts </a>
-                    <a class="mdl-navigation__link is-active" href="searchAccounts.html">Search Account</a>
-                    <a class="mdl-navigation__link " href="accountsList.html">Accounts List</a>
-   
-                   
+                    <a class="mdl-navigation__link " href="datamanage_datalist.html">Personal Data List</a>
+                    <a class="mdl-navigation__link " href="providedatacontrol.html">Provide Data Control</a>
+                    <a class="mdl-navigation__link is-active" href="checkprovidedata.html">Check Provide Data</a>
+                    <a class="mdl-navigation__link " href="checkrequestdata.html">Check Request Data</a>
                 </nav>
             </div>
         </header>
@@ -76,31 +75,49 @@
                     <div class="mdl-card__media">
                         <img class="article-image" src=" ../images/contact-image.jpg" border="0" alt="">
                     </div>
-                    <div class="mdl-card mdl-cell mdl-cell--12-col" style="padding-left: 390px;">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col" style="padding-left: 30px;height: 800px;">
                     	<div class="mdl-card__title">
-	                        <h2 class="mdl-card__title-text">Search Accounts</h2>
+	                        <h2 class="mdl-card__title-text">Check Provide Data</h2>
 	                    </div>
-                       <form action="#" >
-					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
-					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="address"/>
-					        <label class="mdl-textfield__label" for="sample1">请输入账户地址</label>
-					      </div><br>
-
-					      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  ng-click='searchaccounts()'>
-                                    Search Account
-                          </button><br>
-                          <div class="mdl-textfield mdl-js-textfield textfield-demo">
-                            <label class="" >Account Balance</label><br>
-					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="balance"/>
-					        
-					      </div><br>
-					      <!-- <div class="mdl-textfield mdl-js-textfield textfield-demo">
-                            <label class="" >Account Index</label><br>
-					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="account_index"/>
-					        
-					      </div> --><br>
-                          
-					    </form>
+                        <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp mdl-data-table__cell--non-numeric" style="width: 1000px;">
+							  <thead >
+							    <tr>
+							      <th class="mdl-data-table__cell--non-numeric">Provide Data </th>
+							      <th class="mdl-data-table__cell--non-numeric">Data Type</th>
+							      <th class="mdl-data-table__cell--non-numeric">request name</th>
+							      <th class="mdl-data-table__cell--non-numeric">permission</th>
+							    </tr>
+							  </thead>
+							  <tbody >
+							    <tr >
+							      <td class="mdl-data-table__cell--non-numeric">kth/rss</td>
+							      <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+							      <td class="mdl-data-table__cell--non-numeric">charlotte</td>
+							      <td class="mdl-data-table__cell--non-numeric">false</td>
+							      
+							    </tr>
+							    <tr >
+							      <td class="mdl-data-table__cell--non-numeric">jiit/accelerometer</td>
+							      <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+							      <td class="mdl-data-table__cell--non-numeric">joe</td>
+							      <td class="mdl-data-table__cell--non-numeric">true</td>
+							      
+							    </tr>
+							    <tr >
+							      <td class="mdl-data-table__cell--non-numeric">ctu/personal</td>
+							      <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+							      <td class="mdl-data-table__cell--non-numeric">john</td>
+							      <td class="mdl-data-table__cell--non-numeric">false</td>
+							      
+							    </tr>
+							    <tr >
+							      <td class="mdl-data-table__cell--non-numeric">ctu/personal</td>
+							      <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+							      <td class="mdl-data-table__cell--non-numeric">lucy</td>
+							      <td class="mdl-data-table__cell--non-numeric">true</td>
+							    </tr>
+							  </tbody>
+							</table>
                     </div>
                 </div>
             	
