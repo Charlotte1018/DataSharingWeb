@@ -13,13 +13,13 @@
 	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<!-- 本地文件 -->
-	<script type="text/javascript" src='../js/creatdata.js'></script>
+	<script type="text/javascript" src='../js/datarequest.js'></script>
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<link rel="stylesheet" type="text/css" href="../css/styles2.css">
 	
 </head>
 <body>
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header " ng-app='creatdata' ng-controller='creatData'>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header " ng-app='datarequest' ng-controller='dataRequest'>
 		<header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
             <div class="mdl-layout__header-row portfolio-logo-row">
                 <span class="mdl-layout__title">
@@ -80,16 +80,29 @@
 	                        <h2 class="mdl-card__title-text">Request Data</h2>
 	                    </div>
                        <form action="#" >
+                       <h5>Requester Address:</h5>
+					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+					        
+					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="RequestAddress"/>
+					      </div><br>
+					      <h5>Password:</h5>
+					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+					        
+					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="password"/>
+					      </div><br>
                        <h5>Data Name:</h5>
 					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
 					        
 					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="dataname"/>
 					      </div><br>
-					      <h5>Data Status:</h5>
+					      <!-- <h5>Data Status:</h5>
 					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
 					        
 					        <input class="mdl-textfield__input" type="text" id="sample3" ng-model="datatype1"/>
-					      </div><br>
+					      </div><br> -->
+					      <h1 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  ng-click="RequestData()">
+                                    Request Data
+                          </h1><br>
 					       
                         
                      

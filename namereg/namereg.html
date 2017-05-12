@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>nameReg</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="../node_modules/bignumber.js/bignumber.min.js"></script>
+	<script type="text/javascript" src="../node_modules/web3/web3-light.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="namereg.js"></script>
+</head>
+<body>
+	<div ng-app='myApp' ng-controller='namereg'>
+		<div class="container" style="padding: 100px ;">
+		<form class="input-group">
+			<input type="text" class="form-control" placeholder=" Name" ng-model='name'><br>
+			{{name}}<br>
+			<input type="text" class="form-control" placeholder=" Address" ng-model='address'><br>
+			{{address}}<br>
+			<!-- <h1 class="btn btn-success" type='button' ng-click='changeAddress()'>用户名</h1> -->
+			<button class="btn btn-success" ng-click='changeAddress()'>用户名</button>
+
+		</form>
+
+
+
+
+
+		</div>
+
+
+
+
+	</div>
+</body>
+</html>

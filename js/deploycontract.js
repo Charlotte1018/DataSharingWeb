@@ -24,11 +24,15 @@ app.controller('deploycontract' ,function($scope){
 			if(err){return err;}else {
 				$scope.Hash=hash;$scope.$apply();
 				console.log($scope.Hash);
+				// $scope.Receipt=web3.eth.getTransactionReceipt($scope.Hash);
+				// $scope.myContractAddress=$scope.Receipt.contractAddress;
+				// console.log($scope.myContractAddress);
+				// console.log($scope.Receipt);
 			}});
-		$scope.Receipt=web3.eth.getTransactionReceipt($scope.Hash);
+		// $scope.Receipt=web3.eth.getTransactionReceipt($scope.Hash);
 		// $scope.myContractAddress=$scope.Receipt.contractAddress;
 		// console.log($scope.myContractAddress);
-		console.log($scope.Receipt);
+		// console.log($scope.Receipt);
 	}
 	
 	// $scope.Receipt=function (){

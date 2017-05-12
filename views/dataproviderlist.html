@@ -13,13 +13,13 @@
 	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<!-- 本地文件 -->
-	<script type="text/javascript" src='../js/creatdata.js'></script>
+	<script type="text/javascript" src='../js/dataproviderlist.js'></script>
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<link rel="stylesheet" type="text/css" href="../css/styles2.css">
 	
 </head>
 <body>
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header " ng-app='creatdata' ng-controller='creatData'>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header " ng-app='dataproviderlist' ng-controller='dataProviderlist'>
 		<header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
             <div class="mdl-layout__header-row portfolio-logo-row">
                 <span class="mdl-layout__title">
@@ -30,7 +30,7 @@
             <div class="mdl-layout__header-row portfolio-navigation-row ">
                 <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
                     <a class="mdl-navigation__link " href="dataprovider.html">Provide Data</a>
-                    <a class="mdl-navigation__link is-active" href="dataproviderlist.html">Provide Data List</a>
+                    <a class="mdl-navigation__link is-active" href="dataproviderlist.html">add New Requester</a>
                     
                    
                 </nav>
@@ -77,28 +77,37 @@
                     </div>
                     <div class="mdl-card mdl-cell mdl-cell--12-col" style="padding-left: 390px;height: 800px;">
                     	<div class="mdl-card__title">
-	                        <h2 class="mdl-card__title-text">Provide Data</h2>
+	                        <h2 class="mdl-card__title-text">Add Requester</h2>
 	                    </div>
                        <form action="#" >
-                       <h5>Provider Address:</h5>
+                       <h5>Data Name:</h5>
 					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
 					        
-					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="hash"/>
-					        <label class="mdl-textfield__label" for="sample1">ProviderAddress</label>
+					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="dataname"/>
+					        <label class="mdl-textfield__label" for="sample1">dataname</label>
 					      </div><br>
+                       <h5>Requester Address:</h5>
+					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+					        
+					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="requesteraddress"/>
+					        <label class="mdl-textfield__label" for="sample1">requesteraddress</label>
+					      </div><br>
+					      <h1 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  ng-click="addrequester()">
+                                    Add Requester
+                          </h1><br><br><br>
 					      
                           <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-data-table__cell--non-numeric" >
 	                    	<thead>
 							    <tr>
-							      <th class="mdl-data-table__cell--non-numeric">Provider Address</th>
 							      <th class="mdl-data-table__cell--non-numeric">Data Name</th>
+							      <th class="mdl-data-table__cell--non-numeric">Requester Address</th>
 							      <th></th>
 							    </tr>
 							 </thead>
-						    <tbody ng-repeat="x in transaction" >
+						    <tbody >
 							    <tr >
-						    		<td class="mdl-data-table__cell--non-numeric"></td>
-						    		<td class="mdl-data-table__cell--non-numeric"></td>
+						    		<td class="mdl-data-table__cell--non-numeric">{{dataname}}</td>
+						    		<td class="mdl-data-table__cell--non-numeric">{{requesteraddress}}</td>
 						    	</tr>
 					    	</tbody>
 						</table>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Provide Data Control</title>
+	<title>Provider Data Control</title>
 	<meta charset="utf-8">
 	<script type="text/javascript" src="../node_modules/bignumber.js/bignumber.min.js"></script>
 	<script type="text/javascript" src="../node_modules/web3/web3-light.js"></script>
@@ -77,7 +77,7 @@
                     </div>
                     <div class="mdl-card mdl-cell mdl-cell--12-col" style="padding-left: 30px;height: 800px;">
                     	<div class="mdl-card__title">
-	                        <h2 class="mdl-card__title-text">Provide Data Control</h2>
+	                        <h2 class="mdl-card__title-text">Provider Data Control</h2>
 	                    </div>
                         <table class="mdl-data-table mdl-js-data-table  mdl-shadow--2dp mdl-data-table__cell--non-numeric" style="width: 1000px;">
 							  <thead >
@@ -117,7 +117,30 @@
 							      <td class="mdl-data-table__cell--non-numeric">true</td>
 							    </tr>
 							  </tbody>
-							</table>
+						</table>
+						<form action="#" >
+                       <h5>Data Name:</h5>
+					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+					        
+					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="dataname"/>
+					        <label class="mdl-textfield__label" for="sample1">dataname</label>
+					      </div><br>
+                       <h5>Requester Address:</h5>
+					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+					        
+					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="requesteraddress"/>
+					        <label class="mdl-textfield__label" for="sample1">requesteraddress</label>
+					      </div><br>
+					      <h5>Permission:</h5>
+					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+					        
+					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="permission"/>
+					        <label class="mdl-textfield__label" for="sample1">permission</label>
+					      </div><br>
+					      <h1 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  ng-click="changeAccess()">
+                            change Access
+                          </h1><br><br><br>
+					    </form>
                     </div>
                 </div>
             	
