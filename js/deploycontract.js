@@ -19,7 +19,7 @@ app.controller('deploycontract' ,function($scope){
 		web3.eth.sendTransaction({
 			from:$scope.from,
 			data:$scope.byteCode,
-			gas:400000
+			gas:40000000
 		},function(err,hash){
 			if(err){return err;}else {
 				$scope.Hash=hash;$scope.$apply();

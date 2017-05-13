@@ -10,10 +10,10 @@ creatdata.controller('creatData',function($scope){
 	{
 		web3.personal.unlockAccount($scope.from,$scope.password);
 		$scope.MyContract = web3.eth.contract($scope.abi);
-		$scope.myContractInstance = $scope.MyContract.at('0xB384e6240c8A3F8cfA27D1224a10F00795948340');
+		$scope.myContractInstance = $scope.MyContract.at($scope.ContractAddress);
 		console.log($scope.MyContract);
 		console.log($scope.myContractInstance);
-		$scope.myContractInstance.dataRegister($scope.dataname,$scope.introductionname,$scope.introductionvalue,$scope.level1,$scope.level2,{from:$scope.from});
+		$scope.myContractInstance.dataRegister($scope.dataname,$scope.introductionname,$scope.introductionvalue,$scope.level1,$scope.level2,{from:$scope.from,gas:40000000});
 		$scope.DPAddress=$scope.myContractInstance.DPAddress.call();
 		console.log($scope.DPAddress);
 	};

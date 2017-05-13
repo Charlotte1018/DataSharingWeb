@@ -80,6 +80,17 @@
 	                        <h2 class="mdl-card__title-text">Request Data</h2>
 	                    </div>
                        <form action="#" >
+                       <h5>Contract Address:</h5>
+					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+					        
+					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="ContractAddress"/>
+					        <label class="mdl-textfield__label" for="sample1">ContractAddress</label>
+					      </div><br>
+					      <h5>Data Name:</h5>
+					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+					        
+					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="dataname"/>
+					      </div><br>
                        <h5>Request Address:</h5>
 					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
 					        
@@ -90,8 +101,8 @@
                           <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-data-table__cell--non-numeric" >
 	                    	<thead>
 							    <tr>
-							      <th class="mdl-data-table__cell--non-numeric">Request Address</th>
 							      <th class="mdl-data-table__cell--non-numeric">Data Name</th>
+							      <th class="mdl-data-table__cell--non-numeric">Permission</th>
 							      <th></th>
 							    </tr>
 							 </thead>
