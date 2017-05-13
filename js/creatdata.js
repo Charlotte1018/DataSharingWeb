@@ -13,9 +13,9 @@ creatdata.controller('creatData',function($scope){
 		$scope.myContractInstance = $scope.MyContract.at($scope.ContractAddress);
 		console.log($scope.MyContract);
 		console.log($scope.myContractInstance);
-		$scope.myContractInstance.dataRegister($scope.dataname,$scope.introductionname,$scope.introductionvalue,$scope.level1,$scope.level2,{from:$scope.from,gas:40000000});
-		$scope.DPAddress=$scope.myContractInstance.DPAddress.call();
-		console.log($scope.DPAddress);
+		$scope.myContractInstance.dataRegister($scope.dataname,$scope.introductionname,$scope.introductionvalue,$scope.level1,$scope.level2,{from:$scope.from,gas:80000000});
+		// $scope.DPAddress=$scope.myContractInstance.DPAddress.call();
+		// console.log($scope.DPAddress);
 	};
 	$scope.RequestData=function()
 	{

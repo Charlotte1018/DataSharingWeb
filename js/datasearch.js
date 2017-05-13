@@ -15,27 +15,21 @@ app.controller('Datasearch' ,function($scope){
 	introname:'Accelerometer samples collected through Android phones when driven on different vehicles.',
 	introvalue:'This dataset consists of accelerometer samples collected through Android phones when driven on different vehicles. The dataset consists of 678 Km of drive data, which involved 22 different drivers, 5 different types of vehicles (bus, auto rickshaw, cycle rickshaw, motorcycle, and car) and 4 smartphones.'
 	},
-	{
-	dataname:'ctu/personal',
-	introname:'Mobile phone records of Czech Ph.D. student Michal Ficek.',
-	introvalue:'This dataset contains 142 days of mobile phone records (aka Call Data Records) and ground-truth movement description of Czech Ph.D. student Michal Ficek, stored by his own mobile terminal in 2010-2011.'
-	},
-	{
-	dataname:'jiit/accelerometer',
-	introname:'Accelerometer samples collected through Android phones when driven on different vehicles.',
-	introvalue:'This dataset consists of accelerometer samples collected through Android phones when driven on different vehicles. The dataset consists of 678 Km of drive data, which involved 22 different drivers, 5 different types of vehicles (bus, auto rickshaw, cycle rickshaw, motorcycle, and car) and 4 smartphones.'
-	},
-	{
-	dataname:'ctu/personal',
-	introname:'Mobile phone records of Czech Ph.D. student Michal Ficek.',
-	introvalue:'This dataset contains 142 days of mobile phone records (aka Call Data Records) and ground-truth movement description of Czech Ph.D. student Michal Ficek, stored by his own mobile terminal in 2010-2011.'
-	},
-	{
-	dataname:'kth/rss',
-	introname:'Radio Signal Strength data from a mobile robot along with odometer in indoor and outdoor environments',
-	introvalue:'This dataset contains the RSS (Radio Signal Strength) data collected with a mobile robot in two environments: indoor (KTH) and outdoor (Dortmund). RSSI metric was used to collect the RSS data in terms of dBm. The mobile robot location was recorded using its odometry (dead reckoning).'
-	}
 	];
+	$scope.Abi = [ { "constant": false, "inputs": [ { "name": "introductionName", "type": "bytes32" }, { "name": "introductionValue", "type": "string" } ], "name": "updateIntroduction", "outputs": [], "payable": false, "type": "function" }, { "constant": false, "inputs": [ { "name": "introductionName", "type": "bytes32" }, { "name": "introductionValue", "type": "string" } ], "name": "addIntroduction", "outputs": [], "payable": false, "type": "function" }, { "constant": true, "inputs": [ { "name": "", "type": "bytes32" } ], "name": "introductions", "outputs": [ { "name": "", "type": "string", "value": "a1" } ], "payable": false, "type": "function" }, { "constant": false, "inputs": [ { "name": "introductionName", "type": "bytes32" } ], "name": "getIntroduction", "outputs": [ { "name": "introValue", "type": "string" } ], "payable": false, "type": "function" }, { "constant": false, "inputs": [ { "name": "introductionName", "type": "bytes32" } ], "name": "deleteIntroduction", "outputs": [], "payable": false, "type": "function" }, { "inputs": [ { "name": "name", "type": "bytes32" } ], "payable": false, "type": "constructor" } ];
+	$scope.dataProfile = web3.eth.contract($scope.Abi);
+	$scope.searchInfo=function()
+	{
+		$scope.dataProfileInstance = $scope.dataProfile.at($scope.DataProfileAddress);
+		$scope.introductionName=web3.fromAscii($scope.IntroductionName);
+		$scope.introductions = $scope.dataProfileInstance.introductions.call($scope.introductionName);
+		$scope.IntroductionValue = $scope.introductions.toString();
+		$scope.list=[
+		{name:$scope.introductionName,value:$scope.introductions}
+		];
+		console.log($scope.introductions);
+		console.log($scope.introductionName);
+	}
 
 
 

@@ -75,15 +75,40 @@
                     <div class="mdl-card__media">
                         <img class="article-image" src=" ../images/contact-image.jpg" border="0" alt="">
                     </div>
-                    <div class="mdl-card mdl-cell mdl-cell--12-col" style="padding-left: 30px;">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col" style="padding-left: 350px;">
                     	<div class="mdl-card__title">
 	                        <h2 class="mdl-card__title-text">Personal Data List</h2>
 	                    </div>
-						<div  style="width: 1000px;" ng-repeat="x in datalist">
+						<!-- <div  style="width: 1000px;" ng-repeat="x in datalist">
 							<h5>{{x.dataname}}</h5>
 							<p>{{x.introname}}</p>
 							<p>{{x.introvalue}}</p>
-						</div>
+						</div> -->
+                    
+                    <form>
+                        	<h5> DataProfile Address:</h5>
+					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+					        
+					        <input class="mdl-textfield__input" type="text" id="sample9" ng-model="DataProfileAddress"/>
+					        <label class="mdl-textfield__label" for="sample9">DataProfile Address</label>
+					      </div><br>
+					      <h4>Search Data:</h4>
+                       <h5>Introduction Name:</h5>
+					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+					        
+					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="IntroductionName"/>
+					        <label class="mdl-textfield__label" for="sample1">Introduction Name</label>
+					      </div><br>
+					      <h5>Introduction Value:</h5>
+					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+					        <textarea class="mdl-textfield__input" type="text" id="sample1" ng-model="introductions"></textarea>
+					      </div><br>
+					      <h4 ng-model="IntroductionValue"></h4>
+					      <h1 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  ng-click="search()">
+                            Search
+                          </h1><br><br><br>
+                          <p ng-model="introductions"></p>
+                        </form>
                     </div>
                 </div>
             	

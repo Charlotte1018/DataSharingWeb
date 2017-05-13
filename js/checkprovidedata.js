@@ -14,11 +14,12 @@ app.controller('checkProvidedata',function($scope){
 
 		// web3.personal.unlockAccount($scope.from,'123456');
 		$scope.datarequester = web3.eth.contract($scope.Abi);
-		$scope.datarequesterInstance = $scope.datarequester.at('0x4bfa834c7df55873b4ac9a644593128fb75b9f1f');
+		$scope.datarequesterInstance = $scope.datarequester.at($scope.datarequesterAddress);
 		console.log($scope.datarequester);
 		console.log($scope.datarequesterInstance);
-		$scope.dataRequester=$scope.datarequesterInstance.dataRequester.call();
-		console.log('dataRequester',$scope.dataRequester);
+		$scope.dataRequester=$scope.datarequesterInstance.dataRequester.call($scope.requesteraddress);
+		$scope.permission=$scope.dataRequester.toNumber();
+		console.log('dataRequester',$scope.permission);
 	};
 	$scope.searchInfo=function()
 	{
