@@ -13,13 +13,13 @@
 	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<!-- 本地文件 -->
-	<script type="text/javascript" src="../js/searchaccounts.js"></script>
+	<script type="text/javascript" src="../js/dataquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<link rel="stylesheet" type="text/css" href="../css/styles2.css">
 
 </head>
 <body>
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" ng-app='searchAccounts' ng-controller='searchaccounts'>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header" ng-app='app' ng-controller='ctrl'>
 		<header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
             <div class="mdl-layout__header-row portfolio-logo-row">
                 <span class="mdl-layout__title">
@@ -80,19 +80,45 @@
                     	<div class="mdl-card__title">
 	                        <h2 class="mdl-card__title-text">Data Query</h2>
 	                    </div>
+	                    <form >
+	                    <h5>Contract Address:</h5>
+					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+					        
+					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="ContractAddress"/>
+					        <label class="mdl-textfield__label" for="sample1">ContractAddress</label>
+					      </div><br>
 	                    <h5>Search For the Name</h5>
-                       <form action="#">
+                       
 					        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable textfield-demo">
 					          <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
 					            <i class="material-icons">search</i>
 					          </label>
 					          <div class="mdl-textfield__expandable-holder">
-					            <input class="mdl-textfield__input" type="text" id="sample6" />
+					            <input class="mdl-textfield__input" type="text" id="sample6" ng-model='dataname'/>
 					            <label class="mdl-textfield__label" for="sample6">Expandable Input</label>
 					          </div>
-					        </div>
+					        </div><br>
+					        <br><h1 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  ng-click="searchData()">
+                                    Query Data
+                          </h1><br><br><br>
+                          <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-data-table__cell--non-numeric" >
+	                    	<thead>
+							    <tr>
+							      <th class="mdl-data-table__cell--non-numeric">NAME</th>
+							      <th class="mdl-data-table__cell--non-numeric">VALUE</th>
+							      <th></th>
+							    </tr>
+							 </thead>
+						    <tbody ng-repeat="x in list" >
+							    <tr >
+						    		<td class="mdl-data-table__cell--non-numeric">{{x.name}}</td>
+						    		<td class="mdl-data-table__cell--non-numeric">{{x.value}}</td>
+						    	</tr>
+					    	</tbody>
+						</table>
 					      </form>
-					      <h5>Search For the KeyWord</h5>
+
+					      <!-- <h5>Search For the KeyWord</h5>
                        <form action="#">
 					        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable textfield-demo">
 					          <label class="mdl-button mdl-js-button mdl-button--icon" for="sample5">
@@ -115,7 +141,7 @@
 					            <label class="mdl-textfield__label" for="sample2">Expandable Input</label>
 					          </div>
 					        </div>
-					      </form>
+					      </form> -->
                     </div>
                 </div>
             	
