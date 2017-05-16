@@ -66,7 +66,6 @@
 	        </nav>
         </div>
         <main class="mdl-layout__content">
-        	
         	<div class="section-1 container ">
 				<div class="mdl-shadow--4dp tip">
         		<div class="mdl-cell mdl-cell--12-col mdl-card ">
@@ -76,18 +75,11 @@
                     <div class="mdl-card__media">
                         <img class="article-image" src=" ../images/contact-image.jpg" border="0" alt="">
                     </div>
-                    <div class="mdl-card mdl-cell mdl-cell--12-col" style="padding-left: 300px;">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col" style="padding-left: 350px;">
                     	<div class="mdl-card__title">
 	                        <h2 class="mdl-card__title-text">Data List</h2>
 	                    </div>
-                        
-							
-							<!-- <h5> DataProfile Address:</h5>
-					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
-					        
-					        <input class="mdl-textfield__input" type="text" id="sample9" ng-model="DataProfileAddress"/>
-					        <label class="mdl-textfield__label" for="sample9">DataProfile Address</label>
-					      </div><br> -->
+                       
 					      <h5>Contract Address:</h5>
 					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
 					        
@@ -97,22 +89,34 @@
 					      <h1 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="width:200px;"  ng-click="searchDataProfile()">
                             Search Data
                           </h1><br><br><br>
-					      <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-data-table__cell--non-numeric" >
+						</div>
+                    </div>
+                    <div class="mdl-card mdl-cell mdl-cell--12-col" style="padding-left: 350px;">
+	                    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp " >
 	                    	<thead>
 							    <tr>
-							      <th class="mdl-data-table__cell--non-numeric">Name</th>
-							      <th class="mdl-data-table__cell--non-numeric">Value</th>
-							      <th></th>
+							      <th class="mdl-data-table__cell--non-numeric">DataName</th>
+							      <th>IntroName</th>
+							      <th>IntroValue</th>
 							    </tr>
 							 </thead>
-						    <tbody ng-repeat="x in list" >
-							    <tr >
-						    		<td class="mdl-data-table__cell--non-numeric">{{x.name}}</td>
-						    		<td class="mdl-data-table__cell--non-numeric">{{x.value}}</td>
+						    <tbody>
+						    
+							    <tr ng-repeat='x in dataList'>
+						    		<td class="mdl-data-table__cell--non-numeric">{{x.dataname}}</td>
+						    		<td class="mdl-data-table__cell--non-numeric">{{x.introname}}</td>
+						    		<td class="mdl-data-table__cell--non-numeric">{{x.introvalue}}</td>
 						    	</tr>
+						    	<!-- <tr ng-repeat='x in introName' >
+						    		<td class="mdl-data-table__cell--non-numeric">{{x}}</td>
+						    	</tr>
+						    	<tr ng-repeat='x in introvalue' >
+						    		<td class="mdl-data-table__cell--non-numeric">{{x}}</td>
+						    	</tr> -->
+						    	
 					    	</tbody>
 						</table>
-						</div>
+
                     </div>
                 </div>
             	

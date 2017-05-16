@@ -29,7 +29,7 @@ app.controller('ctrl',function($scope){
 
 		$scope.list = [
 		{name:'文件所在地址：',value:$scope.dpaddress},
-		{name:'文件请求者：',value:$scope.DRAddress},
+		{name:'文件请求者列表：',value:$scope.DRAddress},
 		{name:'文件提供者：',value:$scope.data_provide}
 		];
 

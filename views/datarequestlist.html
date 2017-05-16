@@ -13,13 +13,13 @@
 	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<!-- 本地文件 -->
-	<script type="text/javascript" src='../js/creatdata.js'></script>
+	<script type="text/javascript" src='../js/datarequestlist.js'></script>
 	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 	<link rel="stylesheet" type="text/css" href="../css/styles2.css">
 	
 </head>
 <body>
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header " ng-app='creatdata' ng-controller='creatData'>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header " ng-app='datarequestlist' ng-controller='dataRequestlist'>
 		<header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
             <div class="mdl-layout__header-row portfolio-logo-row">
                 <span class="mdl-layout__title">
@@ -86,29 +86,26 @@
 					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="ContractAddress"/>
 					        <label class="mdl-textfield__label" for="sample1">ContractAddress</label>
 					      </div><br>
-					      <h5>Data Name:</h5>
-					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
-					        
-					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="dataname"/>
-					      </div><br>
                        <h5>Request Address:</h5>
 					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
 					        
-					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="hash"/>
-					        <label class="mdl-textfield__label" for="sample1">RequestAddress</label>
+					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="reqAccount"/>
+					        <label class="mdl-textfield__label" for="sample1">Request Address</label>
 					      </div><br>
-					      
+					      <h1 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  ng-click="Search()">
+                                     Search DataName
+                          </h1><br><br><br>
                           <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-data-table__cell--non-numeric" >
 	                    	<thead>
 							    <tr>
 							      <th class="mdl-data-table__cell--non-numeric">Data Name</th>
-							      <th class="mdl-data-table__cell--non-numeric">Permission</th>
+							      <th class="mdl-data-table__cell--non-numeric"></th>
 							      <th></th>
 							    </tr>
 							 </thead>
-						    <tbody ng-repeat="x in transaction" >
+						    <tbody ng-repeat="x in Data" >
 							    <tr >
-						    		<td class="mdl-data-table__cell--non-numeric"></td>
+						    		<td class="mdl-data-table__cell--non-numeric">{{x}}</td>
 						    		<td class="mdl-data-table__cell--non-numeric"></td>
 						    	</tr>
 					    	</tbody>
