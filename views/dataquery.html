@@ -89,14 +89,9 @@
 					      </div><br>
 	                    <h5>Search For the Name</h5>
                        
-					        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable textfield-demo">
-					          <label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
-					            <i class="material-icons">search</i>
-					          </label>
-					          <div class="mdl-textfield__expandable-holder">
+					        <div class="mdl-textfield mdl-js-textfield  textfield-demo">
 					            <input class="mdl-textfield__input" type="text" id="sample6" ng-model='dataname'/>
-					            <label class="mdl-textfield__label" for="sample6">Expandable Input</label>
-					          </div>
+					            <label class="mdl-textfield__label" for="sample6">Data Name </label>
 					        </div><br>
 					        <br><h1 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  ng-click="searchData()">
                                     Query Data
@@ -129,7 +124,7 @@
 					            <label class="mdl-textfield__label" for="sample6">Expandable Input</label>
 					          </div>
 					        </div>
-					      </form>
+					      </form> -->
 					      <h5>Search For the Category</h5>
                        <form action="#">
 					        <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable textfield-demo">
@@ -140,8 +135,26 @@
 					            <input class="mdl-textfield__input" type="text" id="sample2" />
 					            <label class="mdl-textfield__label" for="sample2">Expandable Input</label>
 					          </div>
-					        </div>
-					      </form> -->
+					        </div><br><br><br>
+					        <h1 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  ng-click="searchDataType()">
+                                    Query Data
+                          	</h1><br><br><br>
+                          	<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-data-table__cell--non-numeric" >
+	                    	<thead>
+							    <tr>
+							      <th class="mdl-data-table__cell--non-numeric">NAME</th>
+							      <th class="mdl-data-table__cell--non-numeric">VALUE</th>
+							      <th></th>
+							    </tr>
+							 </thead>
+						    <tbody ng-repeat="x in list" >
+							    <tr >
+						    		<td class="mdl-data-table__cell--non-numeric">{{x.name}}</td>
+						    		<td class="mdl-data-table__cell--non-numeric">{{x.value}}</td>
+						    	</tr>
+					    	</tbody>
+						</table>
+					      </form>
                     </div>
                 </div>
             	

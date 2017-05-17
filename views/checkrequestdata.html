@@ -80,7 +80,13 @@
 	                        <h2 class="mdl-card__title-text">Check Request Data</h2>
 	                    </div>
                         <form>
-                        	<h5> Requester Contract Address:</h5>
+                        <h5>Contract Address:</h5>
+					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+					        
+					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="ContractAddress"/>
+					        <label class="mdl-textfield__label" for="sample1">ContractAddress</label>
+					      </div><br>
+                        	<h5> Requester  Address:</h5>
 					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
 					        
 					        <input class="mdl-textfield__input" type="text" id="sample9" ng-model="RequesterAddress"/>
@@ -93,14 +99,15 @@
 					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="DataName"/>
 					        <label class="mdl-textfield__label" for="sample1">Data Name</label>
 					      </div><br>
+					      <h1 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  ng-click="checkrequestdata()">
+                            Check Data Access
+                          </h1><br><br><br>
 					      <h5>Permission:</h5>
 					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
 					        
 					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="permission"/>
 					      </div><br>
-					      <h1 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  ng-click="checkrequestdata()">
-                            Check Data Access
-                          </h1><br><br><br>
+					      
                         </form>
                     </div>
                 </div>
