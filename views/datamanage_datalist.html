@@ -87,17 +87,18 @@
 					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="ContractAddress"/>
 					        <label class="mdl-textfield__label" for="sample1">ContractAddress</label>
 					      </div><br>
+					      <h4>Search For Name:</h4>
                         	<h5> Data Name :</h5>
 					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
 					        
 					        <input class="mdl-textfield__input" type="text" id="sample9" ng-model="dataname"/>
 					        <label class="mdl-textfield__label" for="sample9"> Data Name</label>
-					      </div><br>
-					      <h4>Search Data:</h4>
-					      <h1 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  ng-click="search()">
+					      </div>
+					      
+					      <h1 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  ng-click="searchname()">
                             Search
                           </h1><br><br>
-                       <h5>Introduction Name:</h5>
+                          <h5>Introduction Name:</h5>
 					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
 					        
 					        <input class="mdl-textfield__input" type="text" id="sample1" ng-model="introductionName"/>
@@ -109,6 +110,35 @@
 					        <textarea class="mdl-textfield__input" type="text" id="sample1" ng-model="introductions"></textarea>
 					      </div><br>
 					      <h4 ng-model="IntroductionValue"></h4>
+                          <h4>Search For Type:</h4>
+                        	<h5> Type1  :</h5>
+					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+					        
+					        <input class="mdl-textfield__input" type="text" id="sample9" ng-model="type1"/>
+					        <label class="mdl-textfield__label" for="sample9"> Type1</label>
+					      </div>
+					      <h5> Type2  :</h5>
+					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+					        
+					        <input class="mdl-textfield__input" type="text" id="sample9" ng-model="type2"/>
+					        <label class="mdl-textfield__label" for="sample9"> Type2</label>
+					      </div>
+					      
+					      <h1 class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"  ng-click="searchtype()">
+                            Search
+                          </h1><br><br>
+                       <h5>Data Name:</h5>
+					      <div ng-repeat="x in list">
+					        
+					        <!-- <input class="mdl-textfield__input" type="text" id="sample1" ng-model={{x.dataname}}/> -->
+					        <h6 class="mdl-textfield__input" style="width: 300px;">{{x.dataname}}</h6><br>
+					      </div><br>
+					      
+					      <!-- <h5>Introduction Value:</h5>
+					      <div class="mdl-textfield mdl-js-textfield textfield-demo">
+					        <textarea class="mdl-textfield__input" type="text" id="sample1" ng-model="introductions"></textarea>
+					      </div><br>
+					      <h4 ng-model="IntroductionValue"></h4> -->
 					      
                         </form>
                     </div>
